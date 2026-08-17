@@ -1,133 +1,112 @@
 /**
- * Filosofía visual: Cartografía de aprendizaje.
- * Micrositio editorial para una exposición coral: recorrido, evidencias y diálogo.
+ * Filosofía visual: evidencias situadas y cartografía de aprendizaje.
+ * La interfaz emplea recursos reales de la Especialización con interacciones públicas y pertinentes.
  */
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
-  ArrowDown, ArrowUpRight, Bot, ChevronRight, Compass, Eye, Gamepad2,
-  GraduationCap, Layers3, Menu, MessageCircleMore, Network, Pause,
-  Play, Route, ShieldCheck, Sparkles, UsersRound, X,
+  ArrowDown, ArrowUpRight, Bot, BookOpenCheck, ChevronRight, ExternalLink,
+  Gamepad2, GraduationCap, Menu, MessageCircleMore, Network, PlayCircle,
+  ShieldCheck, Sparkles, UsersRound, X,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const stations = [
-  ["inicio", "Inicio", "00"], ["decidir", "Decidir", "01"],
-  ["trayectoria", "Trayectoria", "02"], ["modulo0", "Módulo 0", "03"],
-  ["escenarios", "Escenarios", "04"], ["cierre", "Cierre", "05"],
-];
+type Evidence = "mapa" | "desafio1" | "desafio2" | "bonus" | "metaverso" | null;
 
-const modules = [
-  ["00", "Comunidades", "Construir red y presencia digital"],
-  ["01", "Tecnologías y educación", "Problematizar la cultura digital"],
-  ["02", "Trayectos", "Diseñar experiencias formativas"],
-  ["03", "Materiales", "Mediar con lenguajes diversos"],
-  ["04", "Comunicación", "Sostener interacción significativa"],
-  ["05", "Evaluación", "Acompañar procesos con evidencia"],
-  ["06", "Innovación", "Analizar tendencias críticamente"],
-  ["07", "TFI", "Transferir saberes a un proyecto situado"],
-];
+const menu = [["inicio", "Inicio", "00"], ["sentido", "Sentido", "01"], ["trayectoria", "Trayectoria", "02"], ["modulo0", "Módulo 0", "03"], ["ecosistema", "Ecosistema", "04"], ["dialogo", "Diálogo", "05"]];
 
-const rehearsal = [
-  ["00:00", "Apertura y pregunta", "Docente 1"],
-  ["02:30", "Decisión pedagógica", "Docente 1"],
-  ["07:30", "Trayectoria y datos", "Docente 2"],
-  ["14:00", "Módulo 0 en acción", "Docente 3"],
-  ["21:00", "Escenarios y criterios", "Docente 4"],
-  ["28:00", "Cierre coral", "Todas"],
-];
+const modalData = {
+  mapa: { title: "Mapa de ruta · Módulo 0", subtitle: "El mapa hace visible el itinerario del módulo, sus puntos de encuentro, su metodología y sus criterios de evaluación. Es una decisión de diseño que anticipa el recorrido y orienta la autonomía.", image: "/manus-storage/mapa-ruta-modulo0_2b647a6b.png" },
+  desafio1: { title: "Desafío 1 · Construyendo comunidad", subtitle: "Una consigna para experimentar la comunidad como práctica compartida y no como una declaración abstracta.", image: "/manus-storage/DESAFIO1-MODULO0_22e3e81b.JPG" },
+  desafio2: { title: "Desafío 2 · Ciudadanía digital", subtitle: "Una propuesta para problematizar identidad, huella digital, cuidado y participación responsable en red.", image: "/manus-storage/DESAFIO2-MODULO0_02f66a7c.JPG" },
+  bonus: { title: "Bonus tracks · Recorridos optativos", subtitle: "Los bonus tracks abren exploraciones personales dentro de un marco común. La actividad optativa funciona como una invitación a profundizar y ampliar el trayecto formativo.", image: "/manus-storage/2_5990407a.png" },
+  metaverso: { title: "Escenario inmersivo", subtitle: "Una experiencia complementaria para explorar simulaciones y decisiones profesionales cuando ofrece una ganancia pedagógica concreta.", image: "/manus-storage/metaverso_24719039.png" },
+};
 
-const go = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
 export default function Home() {
-  const reduced = useReducedMotion();
   const [active, setActive] = useState("inicio");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [guideOpen, setGuideOpen] = useState(false);
-  const [choice, setChoice] = useState<string | null>(null);
-  const [routeOpen, setRouteOpen] = useState<number | null>(null);
-  const reveal = { initial: { opacity: 0, y: reduced ? 0 : 16 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.18 }, transition: { duration: .5 } };
+  const [evidence, setEvidence] = useState<Evidence>(null);
+  const [reflection, setReflection] = useState<number | null>(null);
+  const [expanded, setExpanded] = useState<string | null>(null);
+  const reveal = { initial: { opacity: 0, y: 16 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: .18 }, transition: { duration: .42 } };
 
   useEffect(() => {
-    const observer = new IntersectionObserver((items) => {
-      const current = items.filter((item) => item.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    const observer = new IntersectionObserver((entries) => {
+      const current = entries.filter((item) => item.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
       if (current) setActive(current.target.id);
-    }, { rootMargin: "-25% 0px -65% 0px", threshold: [0.08, 0.28] });
-    stations.forEach(([id]) => { const target = document.getElementById(id); if (target) observer.observe(target); });
+    }, { rootMargin: "-20% 0px -65% 0px", threshold: [.12, .35] });
+    menu.forEach(([id]) => { const element = document.getElementById(id); if (element) observer.observe(element); });
     return () => observer.disconnect();
   }, []);
 
-  return <main className="presentation-shell">
+  return <main className="evidence-site">
     <a className="skip-link" href="#inicio">Saltar al contenido</a>
-    <header className="presentation-nav">
-      <button className="brand-lockup" onClick={() => go("inicio")} aria-label="Ir al inicio">
-        <img src="/manus-storage/marca-brujula-eva_71a6a9f4.png" alt="Símbolo de ruta de EVA" />
-        <span><strong>EVA</strong><small>Universidad de Mendoza</small></span>
-      </button>
-      <nav className="desktop-nav" aria-label="Estaciones de la exposición">
-        {stations.map(([id, label, number]) => <button className={active === id ? "nav-station active" : "nav-station"} key={id} onClick={() => go(id)}><span>{number}</span>{label}</button>)}
-      </nav>
-      <button className="rehearsal-button" onClick={() => setGuideOpen(true)}><Play size={14} fill="currentColor" /><span>Modo ensayo</span></button>
-      <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir navegación">{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
+    <header className="topbar">
+      <button className="um-lockup" onClick={() => scrollTo("inicio")} aria-label="Ir al inicio"><img src="/manus-storage/logo-um-redes-cuadrado_ba61d503.svg" alt="Universidad de Mendoza" /><span><b>Especialización en EVA</b><small>Universidad de Mendoza</small></span></button>
+      <nav className="main-nav" aria-label="Estaciones de la presentación">{menu.map(([id, label, number]) => <button key={id} className={active === id ? "active" : ""} onClick={() => scrollTo(id)}><i>{number}</i>{label}</button>)}</nav>
+      <button className="menu-trigger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menú">{menuOpen ? <X /> : <Menu />}</button>
     </header>
-    <AnimatePresence>{menuOpen && <motion.nav className="mobile-nav" initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: .18 }}>
-      {stations.map(([id, label, number]) => <button key={id} onClick={() => { go(id); setMenuOpen(false); }}><span>{number}</span>{label}<ChevronRight size={16} /></button>)}
-    </motion.nav>}</AnimatePresence>
-    <aside className="route-rail" aria-label="Progreso del recorrido"><span>RECORRIDO</span><i />{stations.map(([id]) => <button aria-label={`Ir a ${id}`} className={active === id ? "rail-marker active" : "rail-marker"} key={id} onClick={() => go(id)} />)}</aside>
+    <AnimatePresence>{menuOpen && <motion.nav className="mobile-nav" initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }}>{menu.map(([id, label, number]) => <button key={id} onClick={() => { scrollTo(id); setMenuOpen(false); }}><span>{number}</span>{label}<ChevronRight /></button>)}</motion.nav>}</AnimatePresence>
 
-    <section id="inicio" className="station hero-station">
-      <div className="hero-grid" />
-      <div className="hero-copy">
-        <motion.p {...reveal} className="eyebrow light"><span /> II Jornadas Nacionales de Educación 2026</motion.p>
-        <motion.h1 {...reveal}>Del aula virtual<br /><em>al ecosistema</em><br />de aprendizaje.</motion.h1>
-        <motion.p {...reveal} className="hero-body">Una experiencia de la Especialización en Entornos Virtuales de Aprendizaje de la Universidad de Mendoza.</motion.p>
-        <motion.div {...reveal} className="hero-actions"><button className="cta-primary" onClick={() => go("decidir")}>Comenzar el recorrido <ArrowDown size={17} /></button><span>30 min de exposición + diálogo</span></motion.div>
+    <section id="inicio" className="hero section-anchor">
+      <div className="hero-lines" />
+      <div className="hero-content">
+        <motion.p {...reveal} className="eyebrow"><span /> II Jornadas Nacionales de Educación · 2026</motion.p>
+        <motion.h1 {...reveal}>Del aula virtual<br />al <em>ecosistema</em><br />de aprendizaje.</motion.h1>
+        <motion.p {...reveal} className="hero-summary">Una experiencia de formación docente y profesional de la Especialización en Entornos Virtuales de Aprendizaje.</motion.p>
+        <motion.div {...reveal} className="hero-actions"><button className="primary-action" onClick={() => scrollTo("sentido")}>Recorrer la experiencia <ArrowDown /></button><span>Universidad de Mendoza</span></motion.div>
       </div>
-      <motion.div className="hero-art" initial={{ opacity: 0, scale: .97 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .8 }}>
-        <img src="/manus-storage/hero-cartografia-eva_21f9fd43.png" alt="Cartografía visual de un ecosistema de aprendizaje" />
-        <div className="hero-label"><Compass size={17} /><span>Una decisión<br />pedagógica</span></div>
-      </motion.div>
-      <div className="hero-signature">EVA / UM <b>•</b> 2026</div>
+      <motion.div {...reveal} className="hero-brand"><img className="hero-visual" src="/manus-storage/hero-cartografia-eva_21f9fd43.png" alt="Cartografía visual de un ecosistema de aprendizaje" /><div className="hero-stamp"><strong>Diseñar · acompañar · evaluar</strong><span>Tecnologías integradas desde decisiones pedagógicas situadas.</span></div></motion.div>
+      <div className="hero-foot"><span>Especialización EVA</span><b>UM</b><span>Trayectos · comunidad · diseño</span></div>
     </section>
 
-    <section className="audience-prompt" aria-labelledby="question-title">
-      <div className="prompt-number">01</div><div><p className="eyebrow">Pregunta al auditorio</p><h2 id="question-title">Cuando una propuesta se vuelve virtual, ¿qué cambia primero?</h2></div>
-      <div className="choice-grid">{["Comunicación", "Evaluación", "Materiales", "Comunidad"].map((item) => <button key={item} onClick={() => setChoice(item)} className={choice === item ? "choice active" : "choice"}>{item}</button>)}</div>
-      <p className="prompt-note" aria-live="polite">{choice ? `Elegiste “${choice}”. En sala, recuperá dos respuestas y vinculalas con la siguiente estación.` : "En sala: votar por mano alzada y recuperar dos voces breves."}</p>
+    <section className="live-question" aria-labelledby="opening-question">
+      <div className="section-number">01</div>
+      <div><p className="eyebrow">Pausa para dialogar</p><h2 id="opening-question">¿Qué se transforma, verdaderamente, cuando una propuesta educativa se vuelve virtual?</h2></div>
+      <button className="open-question" onClick={() => setReflection(reflection === 0 ? null : 0)}><span>ABRIR REFLEXIÓN</span><ChevronRight /></button>
+      <AnimatePresence>{reflection === 0 && <motion.p className="reflection-panel" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}>La pregunta invita a mirar más allá del soporte: trayectos, tiempos, mediaciones, formas de estar presentes y construcción de comunidad.</motion.p>}</AnimatePresence>
     </section>
 
-    <section id="decidir" className="station decision-station">
-      <motion.div {...reveal} className="section-lead"><p className="eyebrow"><span /> Estación 01</p><h2>Transformar no es trasladar.</h2><p className="serif-copy">La virtualidad no es un soporte neutro. Reorganiza tiempos, espacios, interacciones y modos de producir conocimiento. Un EVA comienza antes de abrir una plataforma: comienza cuando se toman decisiones pedagógicas.</p></motion.div>
-      <div className="architecture-layout">
-        <motion.article {...reveal} className="architecture-card"><div className="card-icon"><Layers3 /></div><h3>Arquitectura pedagógica</h3><p>Una trama intencional de trayectos, materiales, mediaciones, evaluación y participación.</p><div className="architecture-nodes">{["Trayecto", "Interacción", "Acompañamiento", "Evaluación", "Comunidad"].map((node) => <span key={node}>{node}</span>)}</div></motion.article>
-        <motion.blockquote {...reveal} className="statement-card"><span>“</span>Un entorno virtual no es una plataforma: es una decisión pedagógica.<footer>Idea-fuerza de la Especialización</footer></motion.blockquote>
-        <motion.div {...reveal} className="mini-criterion"><Route size={20} /><p><strong>Coherencia</strong><span>Qué se enseña, cómo se enseña y dónde se aprende.</span></p></motion.div>
+    <section id="sentido" className="meaning-section section-anchor">
+      <motion.div {...reveal} className="section-intro"><p className="eyebrow"><span /> Estación 01 · Sentido</p><h2>Transformar no es trasladar.</h2><p>Un entorno virtual no es una plataforma: es una arquitectura pedagógica que organiza trayectos, interacciones, acompañamiento, evaluación y comunidad.</p></motion.div>
+      <div className="principle-grid">{[{icon:<Network />,title:"Trayectos",text:"Múltiples vías de acceso y progresiones reconocibles."},{icon:<UsersRound />,title:"Presencia",text:"Mediación docente, conversación y acompañamiento sostenido."},{icon:<BookOpenCheck />,title:"Evidencias",text:"Actividades que permiten mostrar y revisar procesos."}].map((item) => <motion.article {...reveal} key={item.title}><div className="principle-icon">{item.icon}</div><h3>{item.title}</h3><p>{item.text}</p></motion.article>)}</div>
+      <blockquote>“La coherencia entre qué se enseña, cómo se enseña y dónde se aprende es una condición de la innovación.”<span>Idea-fuerza de la Especialización</span></blockquote>
+    </section>
+
+    <section id="trayectoria" className="trajectory section-anchor">
+      <motion.div {...reveal} className="timeline-lead"><p className="eyebrow"><span /> Estación 02 · Trayectoria</p><h2>Una experiencia que crece y se profundiza.</h2><p>La Diplomatura iniciada en 2020 consolidó una comunidad de práctica. Desde 2024, la Especialización amplía ese recorrido de formación de posgrado con reconocimiento de trayectorias previas.</p></motion.div>
+      <div className="timeline-large"><article><span>2020</span><strong>Diplomatura</strong><p>Tecnología e Innovación Educativa</p></article><article><span>2024</span><strong>Especialización</strong><p>Inicio del trayecto de posgrado en EVA</p></article><article><span>2026</span><strong>Cohorte 4</strong><p>33 cursantes activos en el inicio del Módulo 4</p></article></div>
+      <div className="big-data"><article><span>Diplomatura</span><b>120</b><p>egresos en 7 ediciones</p></article><article><span>Especialización</span><b>72</b><p>egresados de cohortes 1 y 2</p></article><article><span>Cohorte 3</span><b>43</b><p>colegas en desarrollo de TFI</p></article></div><p className="method-line">Los datos de Diplomatura y Especialización se presentan de manera diferenciada: el sistema de equivalencias reconoce trayectorias continuadas.</p>
+    </section>
+
+    <section id="modulo0" className="module-zero section-anchor">
+      <motion.div {...reveal} className="module-header"><div><p className="eyebrow light"><span /> Estación 03 · Caso de estudio</p><h2>El Módulo 0 inaugura<br />una comunidad.</h2></div><img src="/manus-storage/m0logo_b56357c8.png" alt="Módulo 0" /></motion.div>
+      <p className="module-lead">El Taller Comunidades Virtuales de Aprendizaje propone una inmersión en el modelo de la carrera: mapa de ruta, desafíos, actividades optativas, señales de avance y ciudadanía digital.</p>
+      <button className="route-evidence" onClick={() => setEvidence("mapa")}><img src="/manus-storage/mapa-ruta-modulo0_2b647a6b.png" alt="Mapa de ruta del Módulo 0" /><div><span>ARQUITECTURA DEL RECORRIDO</span><h3>Mapa de ruta del Módulo 0</h3><p>Una entrada visual que organiza itinerario, cronograma, metodología, punto de encuentro, programa y evaluación.</p><b>Ver mapa en detalle <PlayCircle /></b></div></button>
+      <div className="evidence-grid">
+        <button className="evidence-card screenshot-card" onClick={() => setEvidence("desafio1")}><img src="/manus-storage/DESAFIO1-MODULO0_22e3e81b.JPG" alt="Captura del Desafío 1 del Módulo 0" /><span className="evidence-chip">ABRIR EVIDENCIA <PlayCircle /></span><div><b>Desafío 1</b><strong>Construyendo comunidad</strong></div></button>
+        <button className="evidence-card screenshot-card" onClick={() => setEvidence("desafio2")}><img src="/manus-storage/DESAFIO2-MODULO0_02f66a7c.JPG" alt="Captura del Desafío 2 del Módulo 0" /><span className="evidence-chip">ABRIR EVIDENCIA <PlayCircle /></span><div><b>Desafío 2</b><strong>Ciudadanía digital</strong></div></button>
       </div>
+      <div className="interactive-routes">
+        {[{id:"bonus",title:"Bonus tracks",text:"Actividades optativas que amplían el trayecto común y habilitan exploraciones personales."},{id:"comunidad",title:"Comunidad",text:"La interacción no se deja librada al azar: se trabaja a través de consignas, mediaciones y responsabilidades compartidas."},{id:"ciudadania",title:"Ciudadanía digital",text:"La identidad, el cuidado, la privacidad y la participación responsable son contenidos de aprendizaje."}].map((item) => <article className={expanded === item.id ? "route-card open" : "route-card"} key={item.id}><button onClick={() => setExpanded(expanded === item.id ? null : item.id)}><div><span>Explorar</span><strong>{item.title}</strong></div><ChevronRight /></button><AnimatePresence>{expanded === item.id && <motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}>{item.text}</motion.p>}</AnimatePresence></article>)}
+      </div>
+      <div className="module-actions"><a href="https://virtual.um.edu.ar/course/view.php?id=31538&section=0" target="_blank" rel="noreferrer"><BookOpenCheck /> Aula del Módulo 0 <ExternalLink /></a><a href="https://virtual.um.edu.ar/course/view.php?id=31538&section=2#opcion1" target="_blank" rel="noreferrer"><Gamepad2 /> Bonus track <ExternalLink /></a><button onClick={() => setEvidence("bonus")}><Sparkles /> Conocer los bonus tracks</button></div>
     </section>
 
-    <section id="trayectoria" className="station trajectory-station">
-      <div className="trajectory-illustration"><img src="/manus-storage/ecosistema-capasy-nodos_63f3c5b0.png" alt="Capas conectadas de un ecosistema de aprendizaje" /></div>
-      <motion.div {...reveal} className="trajectory-copy"><p className="eyebrow"><span /> Estación 02</p><h2>Una trayectoria que se profundiza.</h2><p>La Especialización se construye sobre un recorrido iniciado en 2020 con la Diplomatura en Tecnología e Innovación Educativa y se amplía, desde 2024, como propuesta de posgrado con sistema de equivalencias.</p><div className="timeline"><div><b>2020</b><span>Diplomatura en Tecnología e Innovación Educativa</span></div><div><b>2024</b><span>Inicio de la Especialización en EVA</span></div><div><b>2026</b><span>Cuarta cohorte en curso</span></div></div></motion.div>
-      <div className="data-wall"><article className="stat-card diploma"><span>Diplomatura</span><strong>120</strong><p>egresos registrados<br />en 7 ediciones</p></article><article className="stat-card graduates"><span>Especialización</span><strong>72</strong><p>egresados<br />cohortes 1 y 2</p></article><article className="stat-card tfi"><span>Cohorte 3</span><strong>43</strong><p>colegas en proceso<br />de diseño de TFI</p></article><article className="stat-card active-stat"><span>Cohorte 4</span><strong>33</strong><p>cursantes activos<br />inicio de Módulo 4</p></article></div>
-      <p className="method-note">Los egresos de la Diplomatura y de la Especialización se informan por separado: las equivalencias pueden incluir trayectorias continuadas.</p>
+    <section id="ecosistema" className="ecosystem section-anchor">
+      <motion.div {...reveal} className="ecosystem-intro"><p className="eyebrow"><span /> Estación 04 · Expansión</p><h2>Un aula que conversa con otros escenarios.</h2><p>La plataforma institucional sostiene el trayecto. Telegram, Instagram y los entornos inmersivos lo expanden cuando se integran a una propuesta, una consigna y una mediación docente.</p></motion.div>
+      <div className="ecosystem-grid"><article className="channel-card telegram"><MessageCircleMore /><span>Comunicación de módulo</span><h3>Telegram</h3><p>Un espacio de avisos, acompañamiento y continuidad conversacional.</p><a href="https://t.me/+EUCK0JQ0vYIwOTVh" target="_blank" rel="noreferrer">Abrir grupo <ExternalLink /></a></article><article className="channel-card instagram"><Network /><span>Comunicación expandida</span><h3>Instagram</h3><p>Un canal para hacer circular recursos y sostener presencia institucional.</p><a href="http://instagram.com/entornosvirtuales_um" target="_blank" rel="noreferrer">Abrir perfil <ExternalLink /></a></article><article className="channel-card metaverse"><Sparkles /><span>Escenario emergente</span><h3>Metaverso</h3><p>Una capa para ensayar situaciones cuando aporta valor pedagógico.</p><button onClick={() => setEvidence("metaverso")}>Ver evidencia <PlayCircle /></button></article></div>
+      <div className="activity-band"><div><img src="/manus-storage/trabajoindividual_1be0cc94.png" alt="" /><span>Trabajo individual</span></div><div><img src="/manus-storage/trabajoengrupos_79c16410.png" alt="" /><span>Trabajo en grupos</span></div><div><img src="/manus-storage/trabajocolectvo_5cb20ef0.png" alt="" /><span>Trabajo colectivo</span></div></div>
+      <div className="ethics-note"><ShieldCheck /><p><b>Una condición de diseño:</b> accesibilidad, conectividad, datos personales, sostenibilidad y alfabetización digital son parte de la propuesta; no son una nota al pie.</p></div>
     </section>
 
-    <section className="modules-strip"><div className="modules-heading"><p className="eyebrow light">Arquitectura curricular</p><h2>Ocho módulos.<br />Un trayecto integrado.</h2></div><div className="modules-list">{modules.map(([number, title, description]) => <article className="module-row" key={number}><span>{number}</span><div><strong>{title}</strong><p>{description}</p></div><ArrowUpRight size={17} /></article>)}</div></section>
+    <section id="dialogo" className="dialogue section-anchor"><p className="eyebrow light"><span /> Estación 05 · Conversación</p><h2>Preguntas para seguir pensando juntos.</h2><div className="dialogue-cards">{["¿Qué decisiones pedagógicas conviene revisar cuando un aula se expande más allá de la plataforma?", "¿Cómo se construyen experiencias de aprendizaje significativas sin perder de vista las condiciones reales de participación?", "¿Qué lugar pueden ocupar las tecnologías emergentes en una propuesta que busca ser inclusiva, crítica y situada?"].map((item,index) => <button key={item} className={reflection === index + 1 ? "dialogue-card selected" : "dialogue-card"} onClick={() => setReflection(reflection === index + 1 ? null : index + 1)}><span>0{index + 1}</span><strong>{item}</strong><ChevronRight /></button>)}</div><AnimatePresence>{reflection && reflection > 0 && <motion.p className="dialogue-reflection" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }}>Una pregunta compartida no busca una respuesta única: abre un espacio para reconocer experiencias, tensiones y alternativas en común.</motion.p>}</AnimatePresence></section>
 
-    <section id="modulo0" className="station module-zero-station">
-      <motion.div {...reveal} className="module-zero-copy"><p className="eyebrow"><span /> Estación 03</p><h2>El Módulo 0 no da la bienvenida: <em>inaugura una comunidad.</em></h2><p>El Taller Comunidades Virtuales de Aprendizaje funciona como inmersión en el modelo de la carrera. El aula adopta un mapa de ruta, combina desafíos, actividades electivas y señales de avance, y trabaja la ciudadanía digital como condición de participación.</p><div className="show-cue"><Eye size={19} /><span><b>En exposición:</b> mostrar Mapa de ruta → Desafío 1 → insignia o bonus track. Máximo 90 segundos.</span></div></motion.div>
-      <motion.div {...reveal} className="route-map-card"><img src="/manus-storage/ruta-modulo-cero_07f4bd42.png" alt="Ruta de aprendizaje gamificada" /><div className="map-overlay"><Gamepad2 size={18} /><span>Mapa de ruta<br />Módulo 0</span></div></motion.div>
-      <div className="route-accordion">{[["Llegar", "Reconocer el entorno, la comunidad y el mapa de ruta."], ["Participar", "Resolver desafíos y construir presencia digital responsable."], ["Proyectar", "Transferir decisiones de diseño a los contextos profesionales."]].map(([title, body], index) => <button key={title} onClick={() => setRouteOpen(routeOpen === index ? null : index)} className={routeOpen === index ? "route-step open" : "route-step"}><span>0{index + 1}</span><strong>{title}</strong><ChevronRight size={18} />{routeOpen === index && <p>{body}</p>}</button>)}</div>
-      <aside className="capture-placeholder"><span>ESPACIO PARA EVIDENCIA</span><strong>Insertar captura anonimizada del Mapa de ruta, Desafío 1 o Desafío 2.</strong><p>Reemplazaremos este marcador cuando compartan las capturas finales.</p></aside>
-    </section>
+    <section className="final-section"><GraduationCap /><h2>La transformación educativa no comienza con una plataforma.</h2><p>Comienza con decisiones pedagógicas situadas, con comunidad y con condiciones reales de participación.</p><button onClick={() => scrollTo("inicio")}>Volver al inicio <ArrowUpRight /></button></section>
+    <footer><div><img src="/manus-storage/logo-um-redes-cuadrado_ba61d503.svg" alt="Universidad de Mendoza" /><span>Especialización en Entornos Virtuales de Aprendizaje<br /><small>Universidad de Mendoza</small></span></div><p>II Jornadas Nacionales de Educación · Eje 1: Innovación Tecnológica y Transformación Digital</p></footer>
 
-    <section className="community-station"><div className="community-image"><img src="/manus-storage/comunidad-aprendizaje_b725c169.png" alt="Comunidad profesional conectada a través de un mapa compartido" /></div><div className="community-copy"><p className="eyebrow"><span /> Comunidad y presencia</p><h2>La mediación docente convierte conexión en vínculo.</h2><p>El aula institucional, las redes y los espacios de conversación se complementan. Telegram o Instagram no reemplazan el EVA: expanden la presencia, acercan recursos y sostienen una comunidad cuando están integrados a una consigna y a una mediación docente.</p><div className="community-tags"><span><MessageCircleMore size={15} /> diálogo</span><span><UsersRound size={15} /> codiseño</span><span><ShieldCheck size={15} /> ciudadanía digital</span></div></div></section>
-
-    <section id="escenarios" className="station scenarios-station"><motion.div {...reveal} className="section-lead narrow"><p className="eyebrow light"><span /> Estación 04</p><h2>Escenarios que se interrogan, no se acumulan.</h2><p>Las tecnologías emergentes amplían posibilidades cuando aportan valor pedagógico, son sostenibles y amplían la participación.</p></motion.div><div className="scenario-grid"><article className="scenario-card"><Network size={28} /><span>Redes y comunidades</span><h3>Expandir sin reemplazar.</h3><p>Comunicación, cercanía y circulación de saberes, con privacidad y consentimiento.</p></article><article className="scenario-card highlighted"><Bot size={28} /><span>Inteligencia artificial</span><h3>Salir de la caja negra.</h3><p>Usos transparentes, criterios explícitos, autoría y lectura crítica de sesgos.</p></article><article className="scenario-card"><Sparkles size={28} /><span>Inmersión y simulación</span><h3>Usar cuando añade experiencia.</h3><p>Escenarios para ensayar decisiones, sin convertir la novedad en promesa inevitable.</p></article></div><div className="conditions-panel"><ShieldCheck size={25} /><p><strong>Condición de posibilidad:</strong> accesibilidad, conectividad, tiempos, dispositivos, datos personales y sostenibilidad son parte del diseño, no una nota al pie.</p></div></section>
-
-    <section className="transfer-station"><p className="eyebrow"><span /> Proyección situada</p><h2>Diseñar para transferir.</h2><p className="transfer-lead">Los Trabajos Finales Integradores articulan saberes en proyectos que dialogan con contextos concretos.</p><div className="transfer-grid">{["Aulas de formación docente", "Propuestas para nivel superior", "Capacitaciones institucionales", "Comunidades en equipos docentes"].map((item, index) => <div className="transfer-item" key={item}><span>0{index + 1}</span><strong>{item}</strong></div>)}</div></section>
-
-    <section id="cierre" className="station closing-station"><div className="closing-badge"><GraduationCap size={23} /> Especialización en EVA</div><h2>La transformación educativa<br />empieza con una <em>decisión pedagógica.</em></h2><div className="choral-lines"><p><b>Docente 1</b>No comienza con una plataforma.</p><p><b>Docente 2</b>Comienza con trayectos que reconocen a quienes aprenden.</p><p><b>Docente 3</b>Se sostiene con comunidad, presencia y evaluación que acompaña.</p><p><b>Docente 4</b>Se profundiza con decisiones situadas, éticas y críticas.</p></div><button className="cta-dark" onClick={() => go("inicio")}>Volver al inicio <ArrowUpRight size={17} /></button></section>
-    <footer className="presentation-footer"><div><img src="/manus-storage/marca-brujula-eva_71a6a9f4.png" alt="" /><span>Especialización en Entornos Virtuales de Aprendizaje<br /><small>Universidad de Mendoza</small></span></div><p>II Jornadas Nacionales de Educación 2026 · Eje 1: Innovación Tecnológica y Transformación Digital</p></footer>
-    <AnimatePresence>{guideOpen && <motion.aside className="rehearsal-panel" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 30 }} transition={{ duration: .25 }}><div className="panel-header"><div><p className="eyebrow">Guía operativa</p><h2>Ensayo coral · 30 min</h2></div><button onClick={() => setGuideOpen(false)} aria-label="Cerrar guía"><X /></button></div><p className="panel-intro">Distribuí voces y respetá el tiempo. La demostración del Módulo 0 no debe exceder 90 segundos.</p><ol className="timer-list">{rehearsal.map(([time, focus, speaker]) => <li key={time}><span>{time}</span><div><strong>{focus}</strong><small>{speaker}</small></div></li>)}</ol><div className="panel-tip"><Pause size={18} /><p><strong>Pausa sugerida:</strong> recuperá solo dos voces del auditorio. El debate amplio queda para los 10 minutos posteriores.</p></div></motion.aside>}</AnimatePresence>
+    <AnimatePresence>{evidence && <motion.div className="modal-backdrop" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onMouseDown={() => setEvidence(null)}><motion.section className="evidence-modal" role="dialog" aria-modal="true" aria-label={modalData[evidence].title} initial={{ opacity: 0, scale: .96, y: 18 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: .96, y: 18 }} onMouseDown={(event) => event.stopPropagation()}><button className="modal-close" onClick={() => setEvidence(null)} aria-label="Cerrar ventana"><X /></button><div className="modal-copy"><span>VER EVIDENCIA</span><h2>{modalData[evidence].title}</h2><p>{modalData[evidence].subtitle}</p></div><img src={modalData[evidence].image} alt={modalData[evidence].title} /></motion.section></motion.div>}</AnimatePresence>
   </main>;
 }

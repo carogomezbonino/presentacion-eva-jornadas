@@ -84,3 +84,11 @@ El símbolo propuesto es una brújula abierta formada por cuatro nodos conectado
 ## Color de marca distintivo
 
 **Turquesa EVA:** `#10BFB7`.
+
+## Style Decisions
+
+1. Sustituir las ilustraciones conceptuales con personas por logos, capturas y evidencias reales de la Especialización.
+2. Dimensionar títulos, cuerpos y acciones para proyección a distancia; la navegación puede ser secundaria, pero nunca críptica.
+3. No incluir paneles de ensayo ni referencias a dinámicas internas en la versión que se comparte con el auditorio.
+4. Priorizar ventanas emergentes, desplegables y preguntas activables como recursos de diálogo, sin convertir el micrositio en una secuencia lineal de diapositivas.
+5. Tratar los enlaces autenticados como puertas de acceso externas y usar capturas propias para mostrar su contenido durante la exposición.

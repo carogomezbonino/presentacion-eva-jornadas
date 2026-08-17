@@ -1,0 +1,19 @@
+# Revisión del micrositio
+
+- [x] Clasificar logos, capturas de Módulo 0 y evidencias de actividades compartidas.
+- [x] Revisar la disponibilidad y acceso de los enlaces al aula, Telegram e Instagram.
+- [x] Retirar las ilustraciones con personas y el panel Modo ensayo.
+- [x] Reescalar tipografías y contrastes para lectura en proyector.
+- [x] Integrar logos, capturas y enlaces visibles en estaciones pertinentes.
+- [x] Incorporar ventanas emergentes, contenidos desplegables y preguntas de diálogo activables.
+- [ ] Verificar navegación, enlaces, contraste y respuesta móvil.
+- [ ] Retirar tiempos, indicaciones y toda referencia interna de la interfaz visible.
+- [ ] Reubicar el logo Módulo 0 exclusivamente en su estación de caso de estudio.
+- [ ] Integrar el mapa de ruta real como evidencia principal del Módulo 0.
+- [ ] Reemplazar preguntas con opciones por preguntas reflexivas abiertas.
+- [ ] Reincorporar visuales conceptuales pertinentes, sin ilustraciones de personas.
+- [x] Retirar tiempos, indicaciones y toda referencia interna de la interfaz visible.
+- [x] Reubicar el logo Módulo 0 exclusivamente en su estación de caso de estudio.
+- [x] Integrar el mapa de ruta real como evidencia principal del Módulo 0.
+- [x] Reemplazar preguntas con opciones por preguntas reflexivas abiertas.
+- [x] Reincorporar visuales conceptuales pertinentes, sin ilustraciones de personas.
