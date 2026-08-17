@@ -31,3 +31,11 @@
 - [x] Retirar ilustraciones genéricas con personas y movimientos que desplacen tarjetas estructurales.
 - [x] Reorganizar Trayectoria y Módulo 0 en niveles de información visibles y ampliables.
 - [x] Establecer contraste pleno y escalas tipográficas proyectables en cada ancla de navegación.
+- [ ] Garantizar un menú sticky responsive con estados activos y navegación móvil clara.
+- [ ] Localizar e integrar capturas pertinentes de Telegram e Instagram en ventanas emergentes.
+- [ ] Vincular los conceptos de autores con decisiones visibles del relato pedagógico.
+- [ ] Incorporar animaciones suaves y efectos visuales de bajo riesgo, sin desplazamientos estructurales.
+- [x] Garantizar un menú sticky responsive con estados activos y navegación móvil clara.
+- [x] Localizar e integrar capturas pertinentes de Telegram e Instagram en ventanas emergentes.
+- [x] Vincular los conceptos de autores con decisiones visibles del relato pedagógico.
+- [x] Incorporar animaciones suaves y efectos visuales de bajo riesgo, sin desplazamientos estructurales.

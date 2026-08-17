@@ -15,6 +15,10 @@ La visual **ruta-modulo-cero** refuerza la metáfora del recorrido y se utilizar
 
 La visual de comunidad con personajes no se integrará de manera automática: solo se incorporarán imágenes que refuercen un concepto o una evidencia concreta, evitando un uso decorativo de los recursos.
 
+## Revisión de comunicación expandida
+
+Los archivos `pasted_file_C2rC2Q_image.png` y `pasted_file_2mabbB_image.png` son piezas ilustrativas/promocionales; no constituyen capturas de Telegram ni de Instagram. No se utilizarán como reemplazo de evidencia de esos espacios. Para las ventanas emergentes de comunicación se requiere una captura real y anonimizada del grupo de Telegram y una captura del perfil o de una publicación del Instagram de la Especialización.
+
 ## Capturas pendientes de integración
 
 El micrositio incluye un marcador visible y reemplazable para capturas anonimizadas del Módulo 0. Se recomiendan: mapa de ruta, Desafío 1, Desafío 2, insignias o bonus tracks, Instagram, Telegram y, si existiera, un escenario inmersivo. Antes de incorporarlas se deben ocultar nombres, fotografías, correos y cualquier dato que permita identificar a cursantes.
