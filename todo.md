@@ -39,3 +39,9 @@
 - [x] Localizar e integrar capturas pertinentes de Telegram e Instagram en ventanas emergentes.
 - [x] Vincular los conceptos de autores con decisiones visibles del relato pedagógico.
 - [x] Incorporar animaciones suaves y efectos visuales de bajo riesgo, sin desplazamientos estructurales.
+- [ ] Diagnosticar y corregir el menú sticky para que se mantenga visible sobre todo el recorrido.
+- [ ] Verificar la navegación responsive y el estado activo de cada sección.
+- [ ] Ampliar el contenido conceptual, las experiencias y las evidencias de cada estación.
+- [x] Diagnosticar y corregir el menú sticky para que se mantenga visible sobre todo el recorrido.
+- [x] Verificar la navegación responsive y el estado activo de cada sección.
+- [x] Ampliar el contenido conceptual, las experiencias y las evidencias de cada estación.

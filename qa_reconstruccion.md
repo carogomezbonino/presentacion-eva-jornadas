@@ -17,3 +17,5 @@ La estación Ecosistema mantiene tres capas de información diferenciadas, un bl
 La ventana emergente de comunicación se validó con dos evidencias: la vista pública del grupo de Telegram del Módulo 2 y una pieza institucional de difusión de la Especialización. Las imágenes se muestran completas mediante ajuste de contención y el modal conserva enlaces directos a Telegram e Instagram. La segunda evidencia se identifica como comunicación institucional; una captura real del perfil de Instagram podrá sustituirla cuando el equipo la aporte.
 
 La revisión técnica confirma que el encabezado se comporta como navegación sticky con posición superior fija; la banda de conceptos mantiene tres columnas en escritorio; las evidencias de los modales se muestran con ajuste de contención, y la textura de portada cuenta con animación suave de bajo riesgo.
+
+Tras corregir el contenedor principal, el menú permanece visible en la parte superior al desplazarse por la estación Sentido. El encabezado conserva contraste pleno y los tres niveles de información —principios, decisiones de diseño y marcos conceptuales— mantienen separación, márgenes y lectura proyectada.
