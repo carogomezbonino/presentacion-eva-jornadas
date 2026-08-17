@@ -45,3 +45,11 @@
 - [x] Diagnosticar y corregir el menú sticky para que se mantenga visible sobre todo el recorrido.
 - [x] Verificar la navegación responsive y el estado activo de cada sección.
 - [x] Ampliar el contenido conceptual, las experiencias y las evidencias de cada estación.
+- [ ] Analizar la paleta institucional y el sistema de carteles por módulo para definir su uso selectivo.
+- [ ] Reconstruir la sección curricular como recorrido visual de M00 a M07, con explicaciones pedagógicas ampliables.
+- [ ] Reforzar la evidencia de comunidad, comunicación y transferencia con interacciones pertinentes.
+- [ ] Revisar la respuesta móvil, la navegación sticky y la densidad conceptual antes de la siguiente entrega.
+- [x] Analizar la paleta institucional y el sistema de carteles por módulo para definir su uso selectivo.
+- [x] Reconstruir la sección curricular como recorrido visual de M00 a M07, con explicaciones pedagógicas ampliables.
+- [x] Reforzar la evidencia de comunidad, comunicación y transferencia con interacciones pertinentes.
+- [x] Revisar la respuesta móvil, la navegación sticky y la densidad conceptual antes de la siguiente entrega.

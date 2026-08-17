@@ -19,3 +19,5 @@ La ventana emergente de comunicación se validó con dos evidencias: la vista p�
 La revisión técnica confirma que el encabezado se comporta como navegación sticky con posición superior fija; la banda de conceptos mantiene tres columnas en escritorio; las evidencias de los modales se muestran con ajuste de contención, y la textura de portada cuenta con animación suave de bajo riesgo.
 
 Tras corregir el contenedor principal, el menú permanece visible en la parte superior al desplazarse por la estación Sentido. El encabezado conserva contraste pleno y los tres niveles de información —principios, decisiones de diseño y marcos conceptuales— mantienen separación, márgenes y lectura proyectada.
+
+El explorador curricular abre en una ventana emergente independiente, presenta los ocho módulos mediante sus carteles institucionales y muestra una explicación pedagógica para el módulo seleccionado. Los carteles no se emplean como decoración del recorrido principal: se reservan para la interacción que explica la progresión curricular.
