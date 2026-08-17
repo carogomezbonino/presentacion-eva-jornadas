@@ -17,3 +17,7 @@
 - [x] Integrar el mapa de ruta real como evidencia principal del Módulo 0.
 - [x] Reemplazar preguntas con opciones por preguntas reflexivas abiertas.
 - [x] Reincorporar visuales conceptuales pertinentes, sin ilustraciones de personas.
+- [x] Ampliar las estaciones con conceptos y experiencias de la ponencia y del guion coral.
+- [x] Explicar el mapa de ruta, los desafíos y las insignias en relación con sus decisiones pedagógicas.
+- [x] Incorporar visuales pertinentes de la primera versión y nuevas evidencias sin sobrecargar el recorrido.
+- [x] Aumentar las escalas tipográficas de apoyo y reforzar las animaciones e interacciones de las tarjetas.
