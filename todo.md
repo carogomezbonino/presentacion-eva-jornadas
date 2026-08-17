@@ -21,3 +21,13 @@
 - [x] Explicar el mapa de ruta, los desafíos y las insignias en relación con sus decisiones pedagógicas.
 - [x] Incorporar visuales pertinentes de la primera versión y nuevas evidencias sin sobrecargar el recorrido.
 - [x] Aumentar las escalas tipográficas de apoyo y reforzar las animaciones e interacciones de las tarjetas.
+- [ ] Auditar todas las estaciones para detectar superposiciones, márgenes defectuosos, contrastes débiles e imágenes improcedentes.
+- [ ] Elaborar una matriz priorizada de correcciones de composición, jerarquía y navegación.
+- [ ] Reconstruir el recorrido en seis estaciones con una idea fuerza, evidencia y acción por estación.
+- [ ] Retirar ilustraciones genéricas con personas y movimientos que desplacen tarjetas estructurales.
+- [ ] Reorganizar Trayectoria y Módulo 0 en niveles de información visibles y ampliables.
+- [ ] Establecer contraste pleno y escalas tipográficas proyectables en cada ancla de navegación.
+- [x] Reconstruir el recorrido en seis estaciones con una idea fuerza, evidencia y acción por estación.
+- [x] Retirar ilustraciones genéricas con personas y movimientos que desplacen tarjetas estructurales.
+- [x] Reorganizar Trayectoria y Módulo 0 en niveles de información visibles y ampliables.
+- [x] Establecer contraste pleno y escalas tipográficas proyectables en cada ancla de navegación.
