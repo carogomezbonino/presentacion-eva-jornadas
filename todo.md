@@ -53,3 +53,11 @@
 - [x] Reconstruir la sección curricular como recorrido visual de M00 a M07, con explicaciones pedagógicas ampliables.
 - [x] Reforzar la evidencia de comunidad, comunicación y transferencia con interacciones pertinentes.
 - [x] Revisar la respuesta móvil, la navegación sticky y la densidad conceptual antes de la siguiente entrega.
+- [ ] Recuperar las denominaciones oficiales de los módulos y corregir el explorador curricular.
+- [ ] Añadir ventanas emergentes explicativas y diferenciadas para Trayectos, Presencia y Evidencias.
+- [ ] Diferenciar los contenidos y aportes de cada autor en sus marcos conceptuales.
+- [ ] Verificar la respuesta responsive de las nuevas ventanas e interacciones.
+- [x] Recuperar las denominaciones oficiales de los módulos y corregir el explorador curricular.
+- [x] Añadir ventanas emergentes explicativas y diferenciadas para Trayectos, Presencia y Evidencias.
+- [x] Diferenciar los contenidos y aportes de cada autor en sus marcos conceptuales.
+- [x] Verificar la respuesta responsive de las nuevas ventanas e interacciones.

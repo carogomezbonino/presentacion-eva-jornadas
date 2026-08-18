@@ -21,3 +21,5 @@ La revisión técnica confirma que el encabezado se comporta como navegación st
 Tras corregir el contenedor principal, el menú permanece visible en la parte superior al desplazarse por la estación Sentido. El encabezado conserva contraste pleno y los tres niveles de información —principios, decisiones de diseño y marcos conceptuales— mantienen separación, márgenes y lectura proyectada.
 
 El explorador curricular abre en una ventana emergente independiente, presenta los ocho módulos mediante sus carteles institucionales y muestra una explicación pedagógica para el módulo seleccionado. Los carteles no se emplean como decoración del recorrido principal: se reservan para la interacción que explica la progresión curricular.
+
+La tarjeta Trayectos abre una profundización independiente con la explicación de recorridos, progresiones, opciones de profundización y accesos múltiples. Las tarjetas Presencia y Evidencias comparten la misma estructura de lectura pero conservan contenidos propios. Los tres botones de autores se redirigieron a marcos diferenciados: Kap para la virtualidad, Maggio para inclusión genuina y Odetti para forma y navegabilidad.
