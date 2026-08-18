@@ -5,7 +5,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowDown, ArrowRight, BookOpenCheck, ChevronRight, Compass,
-  ExternalLink, GraduationCap, Layers3, Lightbulb, Menu,
+  Download, ExternalLink, GraduationCap, Layers3, Lightbulb, Menu,
   MessageCircleMore, Network, PlayCircle, Route, ShieldCheck,
   Sparkles, UsersRound, X,
 } from "lucide-react";
@@ -17,6 +17,8 @@ const sections = [
   ["inicio", "Inicio", "00"], ["sentido", "Sentido", "01"], ["trayectoria", "Trayectoria", "02"],
   ["modulo0", "Módulo 0", "03"], ["ecosistema", "Ecosistema", "04"], ["dialogo", "Diálogo", "05"],
 ];
+
+const PDF_SUMMARY_URL = "/manus-storage/Arquitectura_curricular_y_marcos_EVA_eccf6d1c.pdf";
 
 const moduleSequence = [
   { code: "M00", title: "Taller Comunidades Virtuales de Aprendizaje", image: "/manus-storage/m00_afc2dc50.png", focus: "Inmersión y construcción de red", explanation: "Abre el trayecto con un mapa de ruta, desafíos, ciudadanía digital y experiencias iniciales de participación. La comunidad se trabaja como condición pedagógica, ética y comunicacional." },
@@ -147,6 +149,23 @@ export default function Home() {
   }, []);
 
   const navigate = (id: string) => { scrollTo(id); setMenuOpen(false); };
+  const downloadSummary = async () => {
+    try {
+      const response = await fetch(PDF_SUMMARY_URL);
+      if (!response.ok) throw new Error("No fue posible recuperar el resumen.");
+      const file = await response.blob();
+      const objectUrl = URL.createObjectURL(file);
+      const anchor = document.createElement("a");
+      anchor.href = objectUrl;
+      anchor.download = "Arquitectura_curricular_y_marcos_EVA.pdf";
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(objectUrl);
+    } catch {
+      window.open(PDF_SUMMARY_URL, "_blank", "noopener,noreferrer");
+    }
+  };
 
   return <main className="academic-site">
     <a className="skip-link" href="#inicio">Saltar al contenido</a>
@@ -167,6 +186,7 @@ export default function Home() {
 
     <section className="closing"><GraduationCap /><h2>La transformación educativa no comienza con una plataforma.</h2><p>Comienza con decisiones pedagógicas situadas, con comunidad y con condiciones reales de participación.</p><button onClick={() => navigate("inicio")}>Volver al inicio <ArrowRight /></button></section>
     <footer><div><img src="/manus-storage/logo-um-redes-cuadrado_ba61d503.svg" alt="Universidad de Mendoza" /><span><b>Especialización en Entornos Virtuales de Aprendizaje</b><small>Universidad de Mendoza</small></span></div><p>II Jornadas Nacionales de Educación · Eje 1: Innovación Tecnológica y Transformación Digital</p></footer>
+    <a className="pdf-download" href={PDF_SUMMARY_URL} onClick={(event) => { event.preventDefault(); void downloadSummary(); }} aria-label="Descargar resumen en PDF: arquitectura curricular y marcos conceptuales" title="Descargar resumen académico en PDF"><Download /><span>Resumen PDF</span></a>
     <AnimatePresence>{modal && <Modal modal={modal} onClose={() => setModal(null)} />}</AnimatePresence>
   </main>;
 }

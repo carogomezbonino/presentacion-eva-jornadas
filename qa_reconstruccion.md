@@ -23,3 +23,7 @@ Tras corregir el contenedor principal, el menú permanece visible en la parte su
 El explorador curricular abre en una ventana emergente independiente, presenta los ocho módulos mediante sus carteles institucionales y muestra una explicación pedagógica para el módulo seleccionado. Los carteles no se emplean como decoración del recorrido principal: se reservan para la interacción que explica la progresión curricular.
 
 La tarjeta Trayectos abre una profundización independiente con la explicación de recorridos, progresiones, opciones de profundización y accesos múltiples. Las tarjetas Presencia y Evidencias comparten la misma estructura de lectura pero conservan contenidos propios. Los tres botones de autores se redirigieron a marcos diferenciados: Kap para la virtualidad, Maggio para inclusión genuina y Odetti para forma y navegabilidad.
+
+El botón flotante “Resumen PDF” está disponible en todas las estaciones, mantiene contraste sobre la interfaz y enlaza correctamente con el documento de cinco páginas. El resumen contiene la arquitectura curricular, los principios de diseño, el caso de estudio del Módulo 0, los marcos conceptuales y los criterios para tecnologías y transferencia.
+
+La descarga se verifica mediante una solicitud de archivo desde el navegador y una descarga local con el nombre `Arquitectura_curricular_y_marcos_EVA.pdf`. El acceso mantiene una apertura de respaldo en nueva pestaña si el navegador impide la descarga directa.

@@ -61,3 +61,6 @@
 - [x] Añadir ventanas emergentes explicativas y diferenciadas para Trayectos, Presencia y Evidencias.
 - [x] Diferenciar los contenidos y aportes de cada autor en sus marcos conceptuales.
 - [x] Verificar la respuesta responsive de las nuevas ventanas e interacciones.
+- [x] Redactar un resumen descargable de la arquitectura curricular y los marcos conceptuales.
+- [x] Generar y publicar el PDF como activo estable del micrositio.
+- [x] Añadir y verificar un botón flotante de descarga accesible y responsive.
