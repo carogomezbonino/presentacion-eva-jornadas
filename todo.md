@@ -64,3 +64,19 @@
 - [x] Redactar un resumen descargable de la arquitectura curricular y los marcos conceptuales.
 - [x] Generar y publicar el PDF como activo estable del micrositio.
 - [x] Añadir y verificar un botón flotante de descarga accesible y responsive.
+- [ ] Sustituir el acceso público a Telegram por una evidencia visual sin enlace ni datos expuestos.
+- [ ] Ampliar los criterios de tecnologías emergentes con explicaciones y ejemplos situados.
+- [ ] Añadir acceso directo al Genially desde la evidencia del mapa de ruta.
+- [ ] Explicitar la porosidad del aula, la comunicación expandida y ejemplos de transferencia de TFI.
+- [ ] Reformular el cierre como declaración tecnoeducativa sin preguntas de diálogo.
+- [ ] Solicitar criterios verificables para explicar cómo se obtiene cada insignia.
+- [ ] Incorporar cuatro hitos obligatorios y cinco Bonus Tracks electivos en la explicación de insignias.
+- [ ] Explicitar que cada cursante completa dos de cinco recorridos optativos según intereses, tiempos y decisiones.
+- [x] Solicitar criterios verificables para explicar cómo se obtiene cada insignia.
+- [x] Incorporar cuatro hitos obligatorios y cinco Bonus Tracks electivos en la explicación de insignias.
+- [x] Explicitar que cada cursante completa dos de cinco recorridos optativos según intereses, tiempos y decisiones.
+- [x] Sustituir el acceso público a Telegram por una evidencia visual sin enlace ni datos expuestos.
+- [x] Ampliar los criterios de tecnologías emergentes con explicaciones y ejemplos situados.
+- [x] Añadir acceso directo al Genially desde la evidencia del mapa de ruta.
+- [x] Explicitar la porosidad del aula, la comunicación expandida y ejemplos de transferencia de TFI.
+- [x] Reformular el cierre como declaración tecnoeducativa sin preguntas de diálogo.

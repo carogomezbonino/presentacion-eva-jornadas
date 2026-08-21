@@ -27,3 +27,13 @@ La tarjeta Trayectos abre una profundización independiente con la explicación 
 El botón flotante “Resumen PDF” está disponible en todas las estaciones, mantiene contraste sobre la interfaz y enlaza correctamente con el documento de cinco páginas. El resumen contiene la arquitectura curricular, los principios de diseño, el caso de estudio del Módulo 0, los marcos conceptuales y los criterios para tecnologías y transferencia.
 
 La descarga se verifica mediante una solicitud de archivo desde el navegador y una descarga local con el nombre `Arquitectura_curricular_y_marcos_EVA.pdf`. El acceso mantiene una apertura de respaldo en nueva pestaña si el navegador impide la descarga directa.
+
+La estación Ecosistema ahora presenta cuatro fichas de criterios con acceso individual a una explicación y un ejemplo situado, además de un acceso específico a ejemplos de transferencia de TFI. La evidencia de comunicación se conserva como captura visual y se eliminó el vínculo público de ingreso al grupo de Telegram.
+
+La ficha de IA generativa se validó visualmente: abre una ventana emergente diferenciada con criterios de autoría, revisión de sesgos, responsabilidad sobre la producción y un ejemplo situado de diseño de materiales. La composición conserva jerarquía y contraste al proyectarse.
+
+El mapa de ruta se abre en una ventana emergente y su acción “Abrir mapa interactivo” dirige correctamente al recurso público de Genially. El visor externo fue accesible en la URL indicada; la reproducción visual depende de las capacidades del navegador del visitante. También se comprobó que la evidencia de Telegram no expone un enlace de ingreso desde el micrositio.
+
+La explicación de insignias se reorganizó para mostrar una estructura de cuatro hitos obligatorios —Inicio, Antesala, Desafío 1 y Desafío 2— y cinco Bonus Tracks electivos, de los cuales cada cursante elige dos. Esta disposición comunica un recorrido compartido con márgenes de autonomía y no presenta las insignias como un ranking individual.
+
+La ventana de insignias se validó visualmente. La composición separa con claridad el tramo obligatorio del electivo y cierra con una explicación sobre autonomía, tiempos diversos y comunidad. Se mantiene legible en la vista de proyección sin recurrir a una galería decorativa de distintivos.
