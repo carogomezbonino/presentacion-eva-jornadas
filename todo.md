@@ -75,6 +75,12 @@
 - [x] Solicitar criterios verificables para explicar cómo se obtiene cada insignia.
 - [x] Incorporar cuatro hitos obligatorios y cinco Bonus Tracks electivos en la explicación de insignias.
 - [x] Explicitar que cada cursante completa dos de cinco recorridos optativos según intereses, tiempos y decisiones.
+- [ ] Reemplazar Comunicación expandida por Aula porosa y explicitar su significado pedagógico.
+- [ ] Vincular el Instagram público del Módulo 02 y retirar la pieza de comunicación institucional.
+- [ ] Incorporar mediación pedagógica y educación a distancia como capas conceptuales del recorrido.
+- [x] Reemplazar Comunicación expandida por Aula porosa y explicitar su significado pedagógico.
+- [x] Vincular el Instagram público del Módulo 02 y retirar la pieza de comunicación institucional.
+- [x] Incorporar mediación pedagógica y educación a distancia como capas conceptuales del recorrido.
 - [x] Sustituir el acceso público a Telegram por una evidencia visual sin enlace ni datos expuestos.
 - [x] Ampliar los criterios de tecnologías emergentes con explicaciones y ejemplos situados.
 - [x] Añadir acceso directo al Genially desde la evidencia del mapa de ruta.

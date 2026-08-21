@@ -37,3 +37,7 @@ El mapa de ruta se abre en una ventana emergente y su acción “Abrir mapa inte
 La explicación de insignias se reorganizó para mostrar una estructura de cuatro hitos obligatorios —Inicio, Antesala, Desafío 1 y Desafío 2— y cinco Bonus Tracks electivos, de los cuales cada cursante elige dos. Esta disposición comunica un recorrido compartido con márgenes de autonomía y no presenta las insignias como un ranking individual.
 
 La ventana de insignias se validó visualmente. La composición separa con claridad el tramo obligatorio del electivo y cierra con una explicación sobre autonomía, tiempos diversos y comunidad. Se mantiene legible en la vista de proyección sin recurrir a una galería decorativa de distintivos.
+
+La estación Ecosistema se reformuló como Aula porosa. El concepto aparece en una tarjeta propia y una nota de profundización que vincula cultura digital, experiencias cotidianas y mediación. La sección de cierre incorpora una formulación sobre educación a distancia, mediación y distancia crítica.
+
+La ventana de Aula porosa se validó visualmente. La captura de Telegram permanece como evidencia sin acceso al grupo y el Instagram del Módulo 02 cuenta con un vínculo público independiente, visible y funcional. Se eliminó la nota de privacidad que ya no era necesaria para la lectura pública.
