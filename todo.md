@@ -81,6 +81,12 @@
 - [x] Reemplazar Comunicación expandida por Aula porosa y explicitar su significado pedagógico.
 - [x] Vincular el Instagram público del Módulo 02 y retirar la pieza de comunicación institucional.
 - [x] Incorporar mediación pedagógica y educación a distancia como capas conceptuales del recorrido.
+- [ ] Reformular la idea de presencia docente sin el uso de la palabra “control”.
+- [ ] Añadir una ventana modal con ejemplos prácticos de aula porosa.
+- [ ] Transformar los aportes de Daniel Prieto Castillo en tarjetas interactivas con revelado animado.
+- [x] Reformular la idea de presencia docente sin el uso de la palabra “control”.
+- [x] Añadir una ventana modal con ejemplos prácticos de aula porosa.
+- [x] Transformar los aportes de Daniel Prieto Castillo en tarjetas interactivas con revelado animado.
 - [x] Sustituir el acceso público a Telegram por una evidencia visual sin enlace ni datos expuestos.
 - [x] Ampliar los criterios de tecnologías emergentes con explicaciones y ejemplos situados.
 - [x] Añadir acceso directo al Genially desde la evidencia del mapa de ruta.

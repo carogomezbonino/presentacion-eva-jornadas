@@ -41,3 +41,11 @@ La ventana de insignias se validó visualmente. La composición separa con clari
 La estación Ecosistema se reformuló como Aula porosa. El concepto aparece en una tarjeta propia y una nota de profundización que vincula cultura digital, experiencias cotidianas y mediación. La sección de cierre incorpora una formulación sobre educación a distancia, mediación y distancia crítica.
 
 La ventana de Aula porosa se validó visualmente. La captura de Telegram permanece como evidencia sin acceso al grupo y el Instagram del Módulo 02 cuenta con un vínculo público independiente, visible y funcional. Se eliminó la nota de privacidad que ya no era necesaria para la lectura pública.
+
+La tarjeta Aula porosa quedó identificada como una profundización interactiva independiente dentro de Ecosistema. Su acceso mantiene la jerarquía visual de las tres capas del ecosistema y se verifica por separado mediante el estado modal.
+
+El modal de Aula porosa se validó visualmente con cuatro ejemplos situados: Instagram del Módulo 02, Telegram, Genially interactivo y producción colaborativa. La ventana explica el propósito de cada apertura y agrega un criterio de decisión que preserva mediación y condiciones de participación.
+
+La sección de Mirada tecnoeducativa muestra tres tarjetas interactivas atribuidas a Daniel Prieto Castillo: cercanía, distancia y distancia crítica. Las tarjetas se presentan con jerarquía clara y están preparadas para revelar el desarrollo completo con una transición breve, sin reducir el contraste del texto principal.
+
+La tarjeta Cercanía se activó y se comprobó el revelado de su desarrollo completo. La interacción mantiene el texto visible sobre fondo de alto contraste y cambia claramente el estado de “Revelar” a “Ocultar desarrollo”.
