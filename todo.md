@@ -114,6 +114,10 @@
 - [x] Vincular la ficha de Inmersión al escenario público de FrameVR.
 - [x] Ajustar el foco del Módulo 06 y reforzar el vínculo con formación profesional en Ciencias Económicas.
 - [x] Verificar la nueva ventana emergente y el acceso externo antes de entregar la actualización.
+- [x] Añadir en Transferencia situada una acción para abrir la ficha de capacidades transferibles a Ciencias Económicas.
+- [x] Redactar la ficha emergente con capacidades tecnoeducativas, expresiones profesionales y decisiones de diseño asociadas.
+- [x] Verificar la nueva interacción en escritorio y móvil.
+- [x] Preparar un pasaje oral breve y su ubicación exacta en el guion coral.
 - [x] Sustituir el acceso público a Telegram por una evidencia visual sin enlace ni datos expuestos.
 - [x] Ampliar los criterios de tecnologías emergentes con explicaciones y ejemplos situados.
 - [x] Añadir acceso directo al Genially desde la evidencia del mapa de ruta.

@@ -29,3 +29,9 @@ La revisión de la versión completa se realizó tanto en escritorio como en for
 ## Cierre técnico
 
 La última compilación de producción finalizó correctamente. La única advertencia corresponde al tamaño del paquete JavaScript generado; no impide la carga ni afecta la funcionalidad de la presentación estática.
+
+## Extensión: capacidades profesionales
+
+La estación **Transferencia situada** incorpora un segundo acceso, «Capacidades profesionales», junto al acceso preexistente a ejemplos de TFI. El bloque visible relaciona la transferencia con interpretar casos, argumentar decisiones, trabajar con otros y sostener una actualización permanente en ámbitos profesionales, incluyendo Ciencias Económicas. La verificación de apertura de su ficha emergente continúa en la siguiente instancia de revisión.
+
+La ficha fue abierta y comprobada en escritorio. Expone cinco capacidades en una matriz de lectura rápida, vinculando cada una con una expresión profesional y una decisión de diseño. El contenido queda en un segundo nivel de lectura, por lo que no interrumpe el recorrido principal del micrositio.
