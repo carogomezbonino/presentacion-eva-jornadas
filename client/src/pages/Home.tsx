@@ -18,7 +18,7 @@ const sections = [
   ["modulo0", "Módulo 0", "03"], ["ecosistema", "Ecosistema", "04"], ["dialogo", "Diálogo", "05"],
 ];
 
-const PDF_SUMMARY_URL = "/manus-storage/Arquitectura_curricular_y_marcos_EVA_eccf6d1c.pdf";
+const PDF_SUMMARY_URL = "/manus-storage/Arquitectura_curricular_marcos_y_capacidades_EVA_97c994ba.pdf";
 
 const moduleSequence = [
   { code: "M00", title: "Taller Comunidades Virtuales de Aprendizaje", image: "/manus-storage/m00_afc2dc50.png", focus: "Inmersión y construcción de red", explanation: "Abre el trayecto con un mapa de ruta, desafíos, ciudadanía digital y experiencias iniciales de participación. La comunidad se trabaja como condición pedagógica, ética y comunicacional." },
@@ -166,7 +166,7 @@ export default function Home() {
       const objectUrl = URL.createObjectURL(file);
       const anchor = document.createElement("a");
       anchor.href = objectUrl;
-      anchor.download = "Arquitectura_curricular_y_marcos_EVA.pdf";
+      anchor.download = "Arquitectura_curricular_marcos_y_capacidades_EVA.pdf";
       document.body.appendChild(anchor);
       anchor.click();
       anchor.remove();

@@ -118,6 +118,9 @@
 - [x] Redactar la ficha emergente con capacidades tecnoeducativas, expresiones profesionales y decisiones de diseño asociadas.
 - [x] Verificar la nueva interacción en escritorio y móvil.
 - [x] Preparar un pasaje oral breve y su ubicación exacta en el guion coral.
+- [x] Incorporar al resumen PDF la síntesis de capacidades profesionales vinculadas a Ciencias Económicas.
+- [x] Verificar el PDF actualizado antes de reemplazar el archivo descargable del micrositio.
+- [x] Publicar el nuevo PDF y comprobar la descarga desde el botón flotante.
 - [x] Sustituir el acceso público a Telegram por una evidencia visual sin enlace ni datos expuestos.
 - [x] Ampliar los criterios de tecnologías emergentes con explicaciones y ejemplos situados.
 - [x] Añadir acceso directo al Genially desde la evidencia del mapa de ruta.
