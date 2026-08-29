@@ -49,3 +49,5 @@ El modal de Aula porosa se validó visualmente con cuatro ejemplos situados: Ins
 La sección de Mirada tecnoeducativa muestra tres tarjetas interactivas atribuidas a Daniel Prieto Castillo: cercanía, distancia y distancia crítica. Las tarjetas se presentan con jerarquía clara y están preparadas para revelar el desarrollo completo con una transición breve, sin reducir el contraste del texto principal.
 
 La tarjeta Cercanía se activó y se comprobó el revelado de su desarrollo completo. La interacción mantiene el texto visible sobre fondo de alto contraste y cambia claramente el estado de “Revelar” a “Ocultar desarrollo”.
+
+La copia offline fue validada mediante apertura directa de `index.html` con protocolo `file://`. La interfaz, la navegación, los estilos y los recursos visuales locales cargan correctamente sin dependencias de medios remotos. El paquete conserva los enlaces externos como acciones opcionales que solo se utilizarán con conectividad.

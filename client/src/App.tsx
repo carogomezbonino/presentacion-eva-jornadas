@@ -8,6 +8,12 @@ import Home from "./pages/Home";
 
 
 function Router() {
+  // La copia offline se abre con file:// y no cuenta con una ruta web raíz.
+  // En ese contexto, se renderiza la presentación directamente.
+  if (typeof window !== "undefined" && window.location.protocol === "file:") {
+    return <Home />;
+  }
+
   return (
     <Switch>
       <Route path={"/"} component={Home} />

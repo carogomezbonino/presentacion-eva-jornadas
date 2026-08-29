@@ -92,3 +92,6 @@ El símbolo propuesto es una brújula abierta formada por cuatro nodos conectado
 3. No incluir paneles de ensayo ni referencias a dinámicas internas en la versión que se comparte con el auditorio.
 4. Priorizar ventanas emergentes, desplegables y preguntas activables como recursos de diálogo, sin convertir el micrositio en una secuencia lineal de diapositivas.
 5. Tratar los enlaces autenticados como puertas de acceso externas y usar capturas propias para mostrar su contenido durante la exposición.
+6. La ruta visual se prolonga entre estaciones mediante una línea punteada y un hito circular; debe leerse como un mapa continuo, no como una suma de bloques independientes.
+7. El símbolo de brújula abierta y nodos conectados acompaña la identidad de la Especialización en la navegación, la apertura y el cierre.
+8. El magenta se reserva para acciones, preguntas e hitos de recorrido; el violeta sostiene ventanas y profundizaciones de escenarios o evidencias.

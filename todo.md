@@ -87,6 +87,33 @@
 - [x] Reformular la idea de presencia docente sin el uso de la palabra “control”.
 - [x] Añadir una ventana modal con ejemplos prácticos de aula porosa.
 - [x] Transformar los aportes de Daniel Prieto Castillo en tarjetas interactivas con revelado animado.
+- [ ] Identificar las referencias remotas del micrositio y preparar sus equivalentes locales.
+- [ ] Generar una carpeta offline con el PDF y los recursos visuales necesarios.
+- [ ] Verificar la apertura local y documentar los enlaces externos que requieren conectividad.
+- [ ] Empaquetar el micrositio local en un archivo ZIP listo para pendrive.
+- [x] Identificar las referencias remotas del micrositio y preparar sus equivalentes locales.
+- [x] Generar una carpeta offline con el PDF y los recursos visuales necesarios.
+- [x] Verificar la apertura local y documentar los enlaces externos que requieren conectividad.
+- [x] Empaquetar el micrositio local en un archivo ZIP listo para pendrive.
+- [ ] Recuperar la ponencia, el micrositio y el guion previo como base del nuevo relato oral.
+- [ ] Definir un hilo conductor, cuatro roles equilibrados y transiciones entre expositoras.
+- [ ] Redactar y verificar un guion coral de 40 minutos con ejemplos y navegación sugerida.
+- [x] Recuperar la ponencia, el micrositio y el guion previo como base del nuevo relato oral.
+- [x] Definir un hilo conductor, cuatro roles equilibrados y transiciones entre expositoras.
+- [x] Redactar y verificar un guion coral de 40 minutos con ejemplos y navegación sugerida.
+- [ ] Revisar el guion anterior para reemplazar formulaciones simples por desarrollos tecno-pedagógicos más situados.
+- [ ] Reescribir el guion coral de 40 minutos con ejemplos para la formación en Ciencias Económicas.
+- [ ] Incorporar preguntas probables del debate y respuestas posibles del equipo expositor.
+- [x] Revisar el guion anterior para reemplazar formulaciones simples por desarrollos tecno-pedagógicos más situados.
+- [x] Reescribir el guion coral de 40 minutos con ejemplos para la formación en Ciencias Económicas.
+- [x] Incorporar preguntas probables del debate y respuestas posibles del equipo expositor.
+- [ ] Revisar si el micrositio incluye una evidencia visual y un acceso pertinente al metaverso del Módulo 06.
+- [ ] Contrastar el guion coral enriquecido con cada estación e interacción disponible en el micrositio.
+- [x] Identificar y priorizar ajustes de contenido, evidencia visual, simplificación y navegación.
+- [x] Publicar la captura real del metaverso del Módulo 06 como evidencia visual del criterio de Inmersión.
+- [x] Vincular la ficha de Inmersión al escenario público de FrameVR.
+- [x] Ajustar el foco del Módulo 06 y reforzar el vínculo con formación profesional en Ciencias Económicas.
+- [x] Verificar la nueva ventana emergente y el acceso externo antes de entregar la actualización.
 - [x] Sustituir el acceso público a Telegram por una evidencia visual sin enlace ni datos expuestos.
 - [x] Ampliar los criterios de tecnologías emergentes con explicaciones y ejemplos situados.
 - [x] Añadir acceso directo al Genially desde la evidencia del mapa de ruta.
